@@ -1,0 +1,214 @@
+Parameter,Value 1,Value 2
+Manufacturer,Ideal Auto,Ideal Auto
+Level,Medium and large SUV,Medium and large SUV
+Energy Type,Extended Range,Extended Range
+Environmental standards,National VI,National VI
+Availability,2024.04,2024.04
+WLTC pure electric cruising range (km),182,182
+CLTC pure electric cruising range (km),212,212
+Battery fast charging time (hours),0.33,0.33
+Battery slow charging time (hours),6,6
+Battery fast charge capacity range (%),20-80,20-80
+Battery slow charging capacity range (%),0-100,0-100
+Maximum power (kW),300,300
+Maximum torque (Nm),529,529
+Gearbox,Electric vehicle single speed gearbox,Electric vehicle single speed gearbox
+Body structure,5-door 5-seater SUV,5-door 5-seater SUV
+Engine,Extended range 154 hp L4,Extended range 154 hp L4
+Motor (Ps),408,408
+Length*width*height(mm),4925*1960*1735,4925*1960*1735
+Official 0-100km/h acceleration (s),5.4,5.4
+Maximum speed (km/h),180,180
+WLTC comprehensive fuel consumption (L/100km),0.72,0.72
+Minimum state of charge fuel consumption (L/100km),6.9,6.9
+Electric energy equivalent fuel consumption (L/100km),2.39,2.39
+Curb weight (kg),2330,2345
+Maximum full load mass (kg),2820,2820
+Body
+Length(mm),4925,4925
+Width(mm),1960,1960
+Height(mm),1735,1735
+Wheelbase(mm),2900,2900
+Front wheel track (mm),1666,1666
+Rear track (mm),1704,1704
+Approach angle (°),20,20
+Departure angle (°),twenty one,twenty one
+Body structure,SUV,SUV
+Door opening method,Swing door,Swing door
+Number of doors,5,5
+Number of seats,5,5
+Fuel tank capacity (L),60,60
+Trunk volume (L),560,560
+Drag coefficient (Cd),0.269,0.269
+Engine
+Engine Model,L2E15M,L2E15M
+Displacement (mL),1496,1496
+Displacement (L),1.5,1.5
+Air intake form,Turbocharger,Turbocharger
+Engine layout,Sideways,Sideways
+Cylinder arrangement,L,L
+Number of cylinders,4,4
+Number of valves per cylinder,4,4
+Valve mechanism,DOHC,DOHC
+Maximum horsepower (Ps),113,113
+Maximum power (kW),113,113
+Maximum power speed (rpm),5500,5500
+Maximum torque (Nm),240,240
+Maximum torque speed (rpm),1500-4000,1500-4000
+Maximum net power (kW),110,110
+Energy Type,Extended Range,Extended Range
+Fuel grade,No. 92s,No. 92s
+Oil supply method,Direct Injection,Direct Injection
+Cylinder head material,Aluminum Alloy,Aluminum Alloy
+Cylinder material,Aluminum Alloy,Aluminum Alloy
+Environmental standards,National VI,National VI
+Electric Motor
+Front motor model,TZ180XS118,TZ180XS118
+Rear motor model,TZ190XY017,TZ190XY017
+Motor Type,Permanent magnet/synchronous,Permanent magnet/synchronous
+Total motor power (kW),300,300
+Total motor horsepower (Ps),408,408
+Total torque of the motor (Nm),529,529
+Maximum power of front motor (kW),120,120
+Maximum torque of front motor (Nm),240,240
+Maximum power of rear motor (kW),190,190
+Maximum torque of rear motor (Nm),309,309
+System total power (kW),300,300
+System comprehensive power (Ps),408,408
+System comprehensive torque (Nm),529,529
+Number of drive motors,Dual motors,Dual motors
+Motor layout,Front + rear,Front + rear
+Battery Type,Lithium iron phosphate battery,Lithium iron phosphate battery
+Battery brand,CATL/Xinwanda,CATL/Xinwanda
+Battery unique technology,Using flame retardant materials and thermal runaway protection technology,Using flame retardant materials and thermal runaway protection technology
+Battery cooling method,Liquid Cooling,Liquid Cooling
+WLTC pure electric cruising range (km),182,182
+CLTC pure electric cruising range (km),212,212
+WLTC comprehensive range (km),1160,1160
+CLTC comprehensive endurance (km),1390,1390
+Battery energy (kWh),36.8,36.8
+Power consumption per 100 km (kWh/100km),21.1,21.1
+Fast charging function,support,support
+Battery fast charging time (hours),0.33,0.33
+Battery slow charging time (hours),6,6
+Battery fast charge capacity range (%),20-80,20-80
+Battery slow charging capacity range (%),0-100,0-100
+Battery cost (Yuan),5000,5000
+Slow charging port location,Right rear side of the car,Right rear side of the car
+Fast charging port location,Right rear side of the car,Right rear side of the car
+External AC discharge power (kW),3.5,3.5
+Minimum allowable value of external discharge (%),20,20
+Charging station (seat),701+,701+
+Charging pile (root),3260+,3260+
+Cities covered nationwide,153+,153+
+Gearbox
+Abbreviation,Electric vehicle single speed gearbox,Electric vehicle single speed gearbox
+Number of gears,1,1
+Gearbox Type,Fixed gear ratio gearbox,Fixed gear ratio gearbox
+Chassis steering
+Drive mode,Dual motor four-wheel drive,Dual motor four-wheel drive
+Four-wheel drive,Electric four-wheel drive,Electric four-wheel drive
+Front suspension type,Double wishbone independent suspension,Double wishbone independent suspension
+Rear suspension type,Five-link independent suspension,Five-link independent suspension
+Steering system type,Electric power assist,Electric power assist
+Vehicle structure,Load-bearing,Load-bearing
+Wheel brake
+Front brake type,Ventilated disc,Ventilated disc
+Rear brake type,Ventilated disc,Ventilated disc
+Parking brake type,Electronic parking brake,Electronic parking brake
+Spare tire specifications,None,None
+Passive safety
+Driver/passenger airbag,Host/Vice,Host/Vice
+Front/rear side airbags,Forward/Back,Forward/Back
+Front/rear head airbag (curtain),Forward/Back,Forward/Back
+Front center airbag,●,●
+Active safety
+ABS anti-lock braking system,●,●
+Braking force distribution (EBD/CBC, etc.),●,●
+Brake assist (EBA/BAS/BA, etc.),●,●
+Traction control (ASR/TCS/TRC, etc.),●,●
+Vehicle stability control (ESC/ESP/DSC, etc.),●,●
+Tire pressure monitoring function,Tire pressure display,Tire pressure display
+Seat belt not fastened reminder,Full vehicle,Full vehicle
+ISOFIX child seat interface,●,●
+Lane Departure Warning System,●,●
+Active braking/active safety systems,●,●
+Fatigue driving tips,●,●
+DOW door opening warning,●,●
+Forward Collision Warning,●,●
+Rear Collision Warning,●,●
+Sentry Mode/Clairvoyance,●,●
+Low speed warning,●,●
+Built-in driving recorder,●,●
+Roadside assistance call,●,●
+Driving Control
+Driving mode switch,Sports,Standard/Comfortable
+Energy recovery system,●,●
+Automatic parking,●,●
+Hill start assist,●,●
+Steep slope descent,●,●
+Variable suspension function,Suspension hardness adjustment,Suspension hardness adjustment
+Driving
+Front/rear parking radar,Forward/Back,Forward/Back
+Driving assistance images,360-degree panoramic images,360-degree panoramic images
+Transparent chassis/540-degree imaging,●,●
+Assisted driving chip,Horizon Quest 5,2 NVIDIA Orin-X
+Total chip computing power,128 TOPS,508 TOPS
+Front perception camera,Monocular,Binocular
+Number of cameras,10,11
+Front perception camera pixels,8 million,8 million
+Environmental perception camera pixels,2 million,8 million
+Side view camera pixels,3 million,3 million
+Surround view camera pixels in the car,●,●
+Number of ultrasonic radars,12,12
+Millimeter wave radar quantity,1,1
+LiDAR brand,HESAI Hesai Technology,HESAI Hesai Technology
+LiDAR Model,AT128,AT128
+Number of LiDARs,1,1
+Laser radar line numbers,128 lines,128 lines
+Exterior mirrors
+Exterior mirrors,Electric adjustment, Electric folding,
+Screen/System
+Central control color screen,Touch LCD screen,Touch LCD screen
+Central control screen size,15.7 inches,15.7 inches
+Central control screen type,LCD,LCD
+Central control screen resolution,3K,3K
+Central control screen pixel density,210PPI,210PPI
+Passenger entertainment screen size,15.7 inches,15.7 inches
+Passenger screen type,LCD,LCD
+Passenger screen resolution,3K,3K
+Pixel density of the co-pilot screen,210PPI,210PPI
+Bluetooth/Car Phone,●,●
+Mobile phone interconnection/mapping,●,●
+Voice assistant wake-up word,Ideal classmates,Ideal classmates
+Voice wake-up word-free,●,●
+Voice wake-up recognition by region,Four regions,Four regions
+Continuous speech recognition,●,●
+See and Say,●,●
+Gesture Control,●,●
+Voiceprint Recognition,●,●
+App Store,●,●
+Car Intelligent Chip,Qualcomm Snapdragon 8295P,Qualcomm Snapdragon 8295P
+Vehicle system memory (GB),Twenty four,Twenty four
+Vehicle system storage (GB),128,128
+Multi-finger flying screen control,●,●
+Intelligent
+Internet of Vehicles,●,●
+4G/5G Network,5G,5G
+OTA Update,●,●
+Wi-Fi Hotspot,●,●
+In-car biometric monitoring system,●,●
+Car KTV,●,●
+Air
+Air conditioning temperature control method,Automatic air conditioning,Automatic air conditioning
+Heat pump air conditioner,●,●
+Rear independent air conditioning,●,●
+Rear air vents,●,●
+Temperature zone control,●,●
+Car air purifier,●,●
+In-car PM2.5 filter,●,●
+Negative ion generator,●,●
+Air Quality Monitoring,●,●
+Car Refrigerator,●,●
+Features
+ADAS auxiliary lights,-,●
