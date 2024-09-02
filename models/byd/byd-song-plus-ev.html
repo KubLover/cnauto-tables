@@ -1,812 +1,1345 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Models</title>
+<body>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            background-color: #f5f5f5;
+            color: #333;
             margin: 0;
             padding: 20px;
         }
-        .button-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 20px;
-            width: 100%;
-        }
-        .model-button {
-            flex: 1 1 calc(50% - 10px); /* Two buttons per row */
-            padding: 15px 20px;
-            background-color: #e0e0e0; /* Light grey background */
-            color: black; /* Black text */
-            cursor: pointer;
-            font-size: 16px;
-            box-sizing: border-box;
-            text-align: center;
-            border-radius: 8px;
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s, box-shadow 0.3s;
-            border: none; /* Invisible border */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            line-height: normal; /* Adjust line height for vertical centering */
-        }
-        .model-button.active {
-            background-color: #007bff; /* Blue background for active state */
-            color: white; /* White text for active state */
-        }
-        .model-button:hover {
-            background-color: #f0f0f0; /* Lighter grey for hover */
-            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
-        }
-        .content-table, .image-gallery {
-            display: none;
-            margin-top: 20px;
-        }
-        .content-table {
-            border-collapse: collapse;
-            width: 100%;
-            background-color: white;
+    
+        .form-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            overflow: hidden;
         }
-        .content-table th, .content-table td {
-            padding: 12px 15px;
-            border: 1px solid #ddd;
+    
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
         }
-        .content-table th {
-            background-color: #f2f2f2;
-            text-align: left;
+    
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #4CAF50;
         }
-        .content-table td {
-            text-align: left;
+    
+        .table-container {
+            overflow-x: auto;
         }
-        .content-table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        .image-gallery img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        .checkbox-container {
-            display: flex;
-            gap: 20px;
+    
+        table {
+            width: 100%;
+            border-collapse: collapse;
             margin-bottom: 20px;
         }
-        .message {
-            display: none;
-            color: red;
+    
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+    
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+        }
+    
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    
+        .feature-title {
+            background-color: #f9f9f9;
             font-weight: bold;
-            margin-top: 10px;
+            padding: 15px;
+            margin-top: 20px;
         }
-
-        @media (max-width: 768px) {
-    .model-button {
-        flex: 1 1 100%; /* One button per row on small screens */
-    }
-
-    .content-table th, .content-table td {
-        padding: 10px; /* Adjust padding for smaller screens */
-    }
-
-    .checkbox-container {
-        flex-direction: column; /* Stack checkboxes vertically */
-        gap: 10px; /* Reduce gap between checkboxes */
-    }
-}
-
     </style>
-    <script>
-        function showContent(id) {
-            const tables = document.querySelectorAll('.content-table');
-            const galleries = document.querySelectorAll('.image-gallery');
+    <div class="form-container">
+    <div class="header">
+    <h1>
+    <meta charset="UTF-8"> <br>
+    </h1>
+    <br>
+    </div>
+    <div class="table-container">
+    <table>
+    <colgroup> <col style="width: 30%;"> <col style="width: 35%;"> <col style="width: 35%;"> </colgroup>
+    <!-- Specifications -->
+    <thead>
+    <tr>
+    <th>Specification</th>
+    <th>Ideal L6 2024 Pro</th>
+    <th>Ideal L6 2024 Max</th>
+    </tr>
+    </thead>
 
-            tables.forEach(table => table.style.display = 'none');
-            galleries.forEach(gallery => gallery.style.display = 'none');
+    <!-- Price -->
+    <tbody>
+    <tr>
+    <td>Price</td>
+    <td>$50,000</td>
+    <td>$52,000</td>
+    </tr>
+    <tr>
+    <td>Manufacturer</td>
+    <td>Lixiang/Ideal Auto</td>
+    <td>Lixiang/Ideal Auto</td>
+    </tr>
+    <tr>
+    <td>Level</td>
+    <td>Medium and large SUV</td>
+    <td>Medium and large SUV</td>
+    </tr>
+    <tr>
+    <td>Energy Type</td>
+    <td>Extended Range</td>
+    <td>Extended Range</td>
+    </tr>
+    <tr>
+    <td>Environmental Standards</td>
+    <td>National VI</td>
+    <td>National VI</td>
+    </tr>
+    <tr>
+    <td>Availability</td>
+    <td>2024.04</td>
+    <td>2024.04</td>
+    </tr>
+    </tbody>
 
-            const isCharacteristicsChecked = document.getElementById('characteristics').checked;
-            const isPicturesChecked = document.getElementById('pictures').checked;
 
-            if (isCharacteristicsChecked) {
-                document.getElementById(id).style.display = 'block';
-            } else if (isPicturesChecked) {
-                document.getElementById(id + '-gallery').style.display = 'block';
-            }
+    </table>
+    <div class="feature-title">Basic Information</div>
+    <table>
+    <colgroup> <col style="width: 30%;"> <col style="width: 35%;"> <col style="width: 35%;"> </colgroup>
+    <tbody>
+    <tr>
+    <td>WLTC Pure Electric Cruising Range (km)</td>
+    <td>182</td>
+    <td>182</td>
+    </tr>
+    <tr>
+    <td>CLTC Pure Electric Cruising Range (km)</td>
+    <td>212</td>
+    <td>212</td>
+    </tr>
+    <tr>
+    <td>Battery Fast Charging Time (hours)</td>
+    <td>0.33</td>
+    <td>0.33</td>
+    </tr>
+    <tr>
+    <td>Battery Slow Charging Time (hours)</td>
+    <td>6</td>
+    <td>6</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Battery fast charge capacity range (%)</td>
+    <td style="height: 19.5938px;">20-80</td>
+    <td style="height: 19.5938px;">20-80</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Battery slow charging capacity range (%)</td>
+    <td style="height: 19.5938px;">0-100</td>
+    <td style="height: 19.5938px;">0-100</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Maximum power (kW)</td>
+    <td style="height: 19.5938px;">300</td>
+    <td style="height: 19.5938px;">300</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Maximum torque (Nm)</td>
+    <td style="height: 19.5938px;">529</td>
+    <td style="height: 19.5938px;">529</td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Gearbox</td>
+    <td style="height: 39.1875px;">Electric vehicle single speed gearbox</td>
+    <td style="height: 39.1875px;">Electric vehicle single speed gearbox</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Body structure</td>
+    <td style="height: 19.5938px;">5-door 5-seater SUV</td>
+    <td style="height: 19.5938px;">5-door 5-seater SUV</td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Engine</td>
+    <td style="height: 39.1875px;">Extended range 154 hp L4</td>
+    <td style="height: 39.1875px;">Extended range 154 hp L4</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Motor (Ps)</td>
+    <td style="height: 19.5938px;">408</td>
+    <td style="height: 19.5938px;">408</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Length*width*height(mm)</td>
+    <td style="height: 19.5938px;">4925*1960*1735</td>
+    <td style="height: 19.5938px;">4925*1960*1735</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Official 0-100km/h acceleration (s)</td>
+    <td style="height: 19.5938px;">5.4</td>
+    <td style="height: 19.5938px;">5.4</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Maximum speed (km/h)</td>
+    <td style="height: 19.5938px;">180</td>
+    <td style="height: 19.5938px;">180</td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">WLTC comprehensive fuel consumption (L/100km)</td>
+    <td style="height: 39.1875px;">0.72</td>
+    <td style="height: 39.1875px;">0.72</td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Minimum state of charge fuel consumption (L/100km)</td>
+    <td style="height: 39.1875px;">6.9</td>
+    <td style="height: 39.1875px;">6.9</td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Electric energy equivalent fuel consumption (L/100km)</td>
+    <td style="height: 39.1875px;">2.39</td>
+    <td style="height: 39.1875px;">2.39</td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Vehicle warranty</td>
+    <td style="height: 39.1875px;">Five years or 100 000 kilometers</td>
+    <td style="height: 39.1875px;">Five years or 100 000 kilometers</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Curb weight (kg)</td>
+    <td style="height: 19.5938px;">2330</td>
+    <td style="height: 19.5938px;">2345</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Maximum full load mass (kg)</td>
+    <td style="height: 19.5938px;">2820</td>
+    <td style="height: 19.5938px;">2820</td>
+    </tr>
+    </tbody>
+    </table>
+
+
+    <div class="feature-title">Body</div>
+    <table>
+    <colgroup> <col style="width: 30%;"> <col style="width: 35%;"> <col style="width: 35%;"> </colgroup>
+    <tbody>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Length(mm)</td>
+    <td style="height: 19.5938px;">4925</td>
+    <td style="height: 19.5938px;">4925</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Width(mm)</td>
+    <td style="height: 19.5938px;">1960</td>
+    <td style="height: 19.5938px;">1960</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Height(mm)</td>
+    <td style="height: 19.5938px;">1735</td>
+    <td style="height: 19.5938px;">1735</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Wheelbase(mm)</td>
+    <td style="height: 19.5938px;">2900</td>
+    <td style="height: 19.5938px;">2900</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Front wheel track (mm)</td>
+    <td style="height: 19.5938px;">1666</td>
+    <td style="height: 19.5938px;">1666</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Rear track (mm)</td>
+    <td style="height: 19.5938px;">1704</td>
+    <td style="height: 19.5938px;">1704</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Approach angle (°)</td>
+    <td style="height: 19.5938px;">20</td>
+    <td style="height: 19.5938px;">20</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Departure angle (°)</td>
+    <td style="height: 19.5938px;">twenty one</td>
+    <td style="height: 19.5938px;">twenty one</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Body structure</td>
+    <td style="height: 19.5938px;">SUV</td>
+    <td style="height: 19.5938px;">SUV</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Door opening method</td>
+    <td style="height: 19.5938px;">Swing door</td>
+    <td style="height: 19.5938px;">Swing door</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Number of doors</td>
+    <td style="height: 19.5938px;">5</td>
+    <td style="height: 19.5938px;">5</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Number of seats</td>
+    <td style="height: 19.5938px;">5</td>
+    <td style="height: 19.5938px;">5</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Fuel tank capacity (L)</td>
+    <td style="height: 19.5938px;">60</td>
+    <td style="height: 19.5938px;">60</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Trunk volume (L)</td>
+    <td style="height: 19.5938px;">560</td>
+    <td style="height: 19.5938px;">560</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Drag coefficient (Cd)</td>
+    <td style="height: 19.5938px;">0.269</td>
+    <td style="height: 19.5938px;">0.269</td>
+    </tr>
+    </tbody>
+    </table>
+
+
+    <div class="feature-title">Engine</div>
+    <table>
+    <colgroup> <col style="width: 30%;"> <col style="width: 35%;"> <col style="width: 35%;"> </colgroup>
+    <tbody>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Engine Model</td>
+    <td style="height: 19.5938px;">L2E15M</td>
+    <td style="height: 19.5938px;">L2E15M</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Displacement (mL)</td>
+    <td style="height: 19.5938px;">1496</td>
+    <td style="height: 19.5938px;">1496</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Displacement (L)</td>
+    <td style="height: 19.5938px;">1.5</td>
+    <td style="height: 19.5938px;">1.5</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Air intake form</td>
+    <td style="height: 19.5938px;">Turbocharger</td>
+    <td style="height: 19.5938px;">Turbocharger</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Engine layout</td>
+    <td style="height: 19.5938px;">Sideways</td>
+    <td style="height: 19.5938px;">Sideways</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Cylinder arrangement</td>
+    <td style="height: 19.5938px;">L</td>
+    <td style="height: 19.5938px;">L</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Number of cylinders</td>
+    <td style="height: 19.5938px;">4</td>
+    <td style="height: 19.5938px;">4</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Number of valves per cylinder</td>
+    <td style="height: 19.5938px;">4</td>
+    <td style="height: 19.5938px;">4</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Valve mechanism</td>
+    <td style="height: 19.5938px;">DOHC</td>
+    <td style="height: 19.5938px;">DOHC</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Maximum horsepower (Ps)</td>
+    <td style="height: 19.5938px;">113</td>
+    <td style="height: 19.5938px;">113</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Maximum power (kW)</td>
+    <td style="height: 19.5938px;">113</td>
+    <td style="height: 19.5938px;">113</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Maximum power speed (rpm)</td>
+    <td style="height: 19.5938px;">5500</td>
+    <td style="height: 19.5938px;">5500</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Maximum torque (Nm)</td>
+    <td style="height: 19.5938px;">240</td>
+    <td style="height: 19.5938px;">240</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Maximum torque speed (rpm)</td>
+    <td style="height: 19.5938px;">1500-4000</td>
+    <td style="height: 19.5938px;">1500-4000</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Maximum net power (kW)</td>
+    <td style="height: 19.5938px;">110</td>
+    <td style="height: 19.5938px;">110</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Energy Type</td>
+    <td style="height: 19.5938px;">Extended Range</td>
+    <td style="height: 19.5938px;">Extended Range</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Fuel grade</td>
+    <td style="height: 19.5938px;">No. 92s</td>
+    <td style="height: 19.5938px;">No. 92s</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Oil supply method</td>
+    <td style="height: 19.5938px;">Direct Injection</td>
+    <td style="height: 19.5938px;">Direct Injection</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Cylinder head material</td>
+    <td style="height: 19.5938px;">Aluminum Alloy</td>
+    <td style="height: 19.5938px;">Aluminum Alloy</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Cylinder material</td>
+    <td style="height: 19.5938px;">Aluminum Alloy</td>
+    <td style="height: 19.5938px;">Aluminum Alloy</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Environmental standards</td>
+    <td style="height: 19.5938px;">National VI</td>
+    <td style="height: 19.5938px;">National VI</td>
+    </tr>
+    </tbody>
+    </table>
+
+
+    <div class="feature-title">Electric Motor</div>
+    <table>
+    <colgroup> <col style="width: 30%;"> <col style="width: 35%;"> <col style="width: 35%;"> </colgroup>
+    <tbody>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Front motor model</td>
+    <td style="height: 19.5938px;">TZ180XS118</td>
+    <td style="height: 19.5938px;">TZ180XS118</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Rear motor model</td>
+    <td style="height: 19.5938px;">TZ190XY017</td>
+    <td style="height: 19.5938px;">TZ190XY017</td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Motor Type</td>
+    <td style="height: 39.1875px;">Permanent magnet/synchronous</td>
+    <td style="height: 39.1875px;">Permanent magnet/synchronous</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Total motor power (kW)</td>
+    <td style="height: 19.5938px;">300</td>
+    <td style="height: 19.5938px;">300</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Total motor horsepower (Ps)</td>
+    <td style="height: 19.5938px;">408</td>
+    <td style="height: 19.5938px;">408</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Total torque of the motor (Nm)</td>
+    <td style="height: 19.5938px;">529</td>
+    <td style="height: 19.5938px;">529</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Maximum power of front motor (kW)</td>
+    <td style="height: 19.5938px;">120</td>
+    <td style="height: 19.5938px;">120</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Maximum torque of front motor (Nm)</td>
+    <td style="height: 19.5938px;">240</td>
+    <td style="height: 19.5938px;">240</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Maximum power of rear motor (kW)</td>
+    <td style="height: 19.5938px;">190</td>
+    <td style="height: 19.5938px;">190</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Maximum torque of rear motor (Nm)</td>
+    <td style="height: 19.5938px;">309</td>
+    <td style="height: 19.5938px;">309</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">System total power (kW)</td>
+    <td style="height: 19.5938px;">300</td>
+    <td style="height: 19.5938px;">300</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">System comprehensive power (Ps)</td>
+    <td style="height: 19.5938px;">408</td>
+    <td style="height: 19.5938px;">408</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">System comprehensive torque (Nm)</td>
+    <td style="height: 19.5938px;">529</td>
+    <td style="height: 19.5938px;">529</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Number of drive motors</td>
+    <td style="height: 19.5938px;">Dual motors</td>
+    <td style="height: 19.5938px;">Dual motors</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Motor layout</td>
+    <td style="height: 19.5938px;">Front + rear</td>
+    <td style="height: 19.5938px;">Front + rear</td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Battery Type</td>
+    <td style="height: 39.1875px;">Lithium iron phosphate battery</td>
+    <td style="height: 39.1875px;">Lithium iron phosphate battery</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Battery brand</td>
+    <td style="height: 19.5938px;">CATL/Xinwanda</td>
+    <td style="height: 19.5938px;">CATL/Xinwanda</td>
+    </tr>
+    <tr style="height: 97.9688px;">
+    <td style="height: 97.9688px;">Battery unique technology</td>
+    <td style="height: 97.9688px;">Using flame retardant materials and thermal runaway protection technology</td>
+    <td style="height: 97.9688px;">Using flame retardant materials and thermal runaway protection technology</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Battery cooling method</td>
+    <td style="height: 19.5938px;">Liquid Cooling</td>
+    <td style="height: 19.5938px;">Liquid Cooling</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">WLTC pure electric cruising range (km)</td>
+    <td style="height: 19.5938px;">182</td>
+    <td style="height: 19.5938px;">182</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">CLTC pure electric cruising range (km)</td>
+    <td style="height: 19.5938px;">212</td>
+    <td style="height: 19.5938px;">212</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">WLTC comprehensive range (km)</td>
+    <td style="height: 19.5938px;">1160</td>
+    <td style="height: 19.5938px;">1160</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">CLTC comprehensive endurance (km)</td>
+    <td style="height: 19.5938px;">1390</td>
+    <td style="height: 19.5938px;">1390</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Battery energy (kWh)</td>
+    <td style="height: 19.5938px;">36.8</td>
+    <td style="height: 19.5938px;">36.8</td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Power consumption per 100 km (kWh/100km)</td>
+    <td style="height: 39.1875px;">21.1</td>
+    <td style="height: 39.1875px;">21.1</td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Three-electric system warranty</td>
+    <td style="height: 39.1875px;">Eight years or 160 000 km</td>
+    <td style="height: 39.1875px;">Eight years or 160 000 km</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Fast charging function</td>
+    <td style="height: 19.5938px;">support</td>
+    <td style="height: 19.5938px;">support</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Battery fast charging time (hours)</td>
+    <td style="height: 19.5938px;">0.33</td>
+    <td style="height: 19.5938px;">0.33</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Battery slow charging time (hours)</td>
+    <td style="height: 19.5938px;">6</td>
+    <td style="height: 19.5938px;">6</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Battery fast charge capacity range (%)</td>
+    <td style="height: 19.5938px;">20-80</td>
+    <td style="height: 19.5938px;">20-80</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Battery slow charging capacity range (%)</td>
+    <td style="height: 19.5938px;">0-100</td>
+    <td style="height: 19.5938px;">0-100</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Battery cost (Yuan)</td>
+    <td style="height: 19.5938px;">5000</td>
+    <td style="height: 19.5938px;">5000</td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Slow charging port location</td>
+    <td style="height: 39.1875px;">Right rear side of the car</td>
+    <td style="height: 39.1875px;">Right rear side of the car</td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Fast charging port location</td>
+    <td style="height: 39.1875px;">Right rear side of the car</td>
+    <td style="height: 39.1875px;">Right rear side of the car</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">External AC discharge power (kW)</td>
+    <td style="height: 19.5938px;">3.5</td>
+    <td style="height: 19.5938px;">3.5</td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Minimum allowable value of external discharge (%)</td>
+    <td style="height: 39.1875px;">20</td>
+    <td style="height: 39.1875px;">20</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Charging station (seat)</td>
+    <td style="height: 19.5938px;">701+</td>
+    <td style="height: 19.5938px;">701+</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Charging pile (root)</td>
+    <td style="height: 19.5938px;">3260+</td>
+    <td style="height: 19.5938px;">3260+</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Cities covered nationwide</td>
+    <td style="height: 19.5938px;">153+</td>
+    <td style="height: 19.5938px;">153+</td>
+    </tr>
+    </tbody>
+    </table>
+
+
+    <div class="feature-title">Gearbox</div>
+    <table>
+    <colgroup> <col style="width: 30%;"> <col style="width: 35%;"> <col style="width: 35%;"> </colgroup>
+    <tbody>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Abbreviation</td>
+    <td style="height: 39.1875px;">Electric vehicle single speed gearbox</td>
+    <td style="height: 39.1875px;">Electric vehicle single speed gearbox</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Number of gears</td>
+    <td style="height: 19.5938px;">1</td>
+    <td style="height: 19.5938px;">1</td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Gearbox Type</td>
+    <td style="height: 39.1875px;">Fixed gear ratio gearbox</td>
+    <td style="height: 39.1875px;">Fixed gear ratio gearbox</td>
+    </tr>
+    </tbody>
+    </table>
+
+
+    <div class="feature-title">Chassis Steering</div>
+    <table>
+    <colgroup> <col style="width: 30%;"> <col style="width: 35%;"> <col style="width: 35%;"> </colgroup>
+    <tbody>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Drive mode</td>
+    <td style="height: 39.1875px;">Dual motor four-wheel drive</td>
+    <td style="height: 39.1875px;">Dual motor four-wheel drive</td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Four-wheel drive</td>
+    <td style="height: 39.1875px;">Electric four-wheel drive</td>
+    <td style="height: 39.1875px;">Electric four-wheel drive</td>
+    </tr>
+    <tr style="height: 58.7812px;">
+    <td style="height: 58.7812px;">Front suspension type</td>
+    <td style="height: 58.7812px;">Double wishbone independent suspension</td>
+    <td style="height: 58.7812px;">Double wishbone independent suspension</td>
+    </tr>
+    <tr style="height: 58.7812px;">
+    <td style="height: 58.7812px;">Rear suspension type</td>
+    <td style="height: 58.7812px;">Five-link independent suspension</td>
+    <td style="height: 58.7812px;">Five-link independent suspension</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Steering system type</td>
+    <td style="height: 19.5938px;">Electric power assist</td>
+    <td style="height: 19.5938px;">Electric power assist</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Vehicle structure</td>
+    <td style="height: 19.5938px;">Load-bearing</td>
+    <td style="height: 19.5938px;">Load-bearing</td>
+    </tr>
+    </tbody>
+    </table>
+
+
+    <div class="feature-title">Wheel brake</div>
+    <table>
+    <colgroup> <col style="width: 30%;"> <col style="width: 35%;"> <col style="width: 35%;"> </colgroup>
+    <tbody>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Front brake type</td>
+    <td style="height: 19.5938px;">Ventilated disc</td>
+    <td style="height: 19.5938px;">Ventilated disc</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Rear brake type</td>
+    <td style="height: 19.5938px;">Ventilated disc</td>
+    <td style="height: 19.5938px;">Ventilated disc</td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Parking brake type</td>
+    <td style="height: 39.1875px;">Electronic parking brake</td>
+    <td style="height: 39.1875px;">Electronic parking brake</td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Rear tire specifications</td>
+    <td style="height: 39.1875px;">255/50 R20 265/45 R21</td>
+    <td style="height: 39.1875px;">255/50 R20 265/45 R21</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Spare tire specifications</td>
+    <td style="height: 19.5938px;">None</td>
+    <td style="height: 19.5938px;">None</td>
+    </tr>
+    </tbody>
+    </table>
+
+
+    <div class="feature-title">Passive safety</div>
+    <table>
+    <colgroup> <col style="width: 30%;"> <col style="width: 35%;"> <col style="width: 35%;"> </colgroup>
+    <tbody>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Driver/passenger airbag</td>
+    <td style="height: 19.5938px;">Host/Vice</td>
+    <td style="height: 19.5938px;">Host/Vice</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Front/rear side airbags</td>
+    <td style="height: 19.5938px;">Forward/Back</td>
+    <td style="height: 19.5938px;">Forward/Back</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Front/rear head airbag (curtain)</td>
+    <td style="height: 19.5938px;">Forward/Back</td>
+    <td style="height: 19.5938px;">Forward/Back</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Front center airbag</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    </tbody>
+    </table>
+
+
+    <div class="feature-title">Active safety</div>
+    <table>
+    <colgroup> <col style="width: 30%;"> <col style="width: 35%;"> <col style="width: 35%;"> </colgroup>
+    <tbody>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">ABS anti-lock braking system</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Tire pressure monitoring function</td>
+    <td style="height: 19.5938px;">Tire pressure display</td>
+    <td style="height: 19.5938px;">Tire pressure display</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Seat belt not fastened reminder</td>
+    <td style="height: 19.5938px;">Full vehicle</td>
+    <td style="height: 19.5938px;">Full vehicle</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">ISOFIX child seat interface</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Lane Departure Warning System</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Active braking/active safety systems</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Fatigue driving tips</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">DOW door opening warning</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Forward Collision Warning</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Rear Collision Warning</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Sentry Mode/Clairvoyance</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Low speed warning</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Built-in driving recorder</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Roadside assistance call</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    </tbody>
+    </table>
+
+
+    <div class="feature-title">Driving Control</div>
+    <table>
+    <colgroup> <col style="width: 30%;"> <col style="width: 35%;"> <col style="width: 35%;"> </colgroup>
+    <tbody>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Energy recovery system</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Automatic parking</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Hill start assist</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Steep slope descent</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Variable suspension function</td>
+    <td style="height: 39.1875px;">Suspension hardness adjustment</td>
+    <td style="height: 39.1875px;">Suspension hardness adjustment</td>
+    </tr>
+    </tbody>
+    </table>
+
+
+    <div class="feature-title">Driving</div>
+    <table>
+    <colgroup> <col style="width: 30%;"> <col style="width: 35%;"> <col style="width: 35%;"> </colgroup>
+    <tbody>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Front/rear parking radar</td>
+    <td style="height: 19.5938px;">Forward/Back</td>
+    <td style="height: 19.5938px;">Forward/Back</td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Driving assistance images</td>
+    <td style="height: 39.1875px;">360-degree panoramic images</td>
+    <td style="height: 39.1875px;">360-degree panoramic images</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Transparent chassis/540-degree imaging</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Assisted driving chip</td>
+    <td style="height: 19.5938px;">Horizon Quest 5</td>
+    <td style="height: 19.5938px;">2 NVIDIA Orin-X</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Total chip computing power</td>
+    <td style="height: 19.5938px;">128 TOPS</td>
+    <td style="height: 19.5938px;">508 TOPS</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Front perception camera</td>
+    <td style="height: 19.5938px;">Monocular</td>
+    <td style="height: 19.5938px;">Binocular</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Number of cameras</td>
+    <td style="height: 19.5938px;">10</td>
+    <td style="height: 19.5938px;">11</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Front perception camera pixels</td>
+    <td style="height: 19.5938px;">8 million</td>
+    <td style="height: 19.5938px;">8 million</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Environmental perception camera pixels</td>
+    <td style="height: 19.5938px;">2 million</td>
+    <td style="height: 19.5938px;">8 million</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Side view camera pixels</td>
+    <td style="height: 19.5938px;">3 million</td>
+    <td style="height: 19.5938px;">3 million</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Surround view camera pixels in the car</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Number of ultrasonic radars</td>
+    <td style="height: 19.5938px;">12</td>
+    <td style="height: 19.5938px;">12</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Millimeter wave radar quantity</td>
+    <td style="height: 19.5938px;">1</td>
+    <td style="height: 19.5938px;">1</td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">LiDAR brand</td>
+    <td style="height: 39.1875px;">HESAI Hesai Technology</td>
+    <td style="height: 39.1875px;">HESAI Hesai Technology</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">LiDAR Model</td>
+    <td style="height: 19.5938px;">AT128</td>
+    <td style="height: 19.5938px;">AT128</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Number of LiDARs</td>
+    <td style="height: 19.5938px;">1</td>
+    <td style="height: 19.5938px;">1</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Laser radar line numbers</td>
+    <td style="height: 19.5938px;">128 lines</td>
+    <td style="height: 19.5938px;">128 lines</td>
+    </tr>
+    </tbody>
+    </table>
+
+
+    <div class="feature-title">Screen/System</div>
+    <table>
+    <colgroup> <col style="width: 30%;"> <col style="width: 35%;"> <col style="width: 35%;"> </colgroup>
+    <tbody>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Central control color screen</td>
+    <td style="height: 19.5938px;">Touch LCD screen</td>
+    <td style="height: 19.5938px;">Touch LCD screen</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Central control screen size</td>
+    <td style="height: 19.5938px;">15.7 inches</td>
+    <td style="height: 19.5938px;">15.7 inches</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Central control screen type</td>
+    <td style="height: 19.5938px;">LCD</td>
+    <td style="height: 19.5938px;">LCD</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Central control screen resolution</td>
+    <td style="height: 19.5938px;">3K</td>
+    <td style="height: 19.5938px;">3K</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Central control screen pixel density</td>
+    <td style="height: 19.5938px;">210PPI</td>
+    <td style="height: 19.5938px;">210PPI</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Passenger entertainment screen size</td>
+    <td style="height: 19.5938px;">15.7 inches</td>
+    <td style="height: 19.5938px;">15.7 inches</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Passenger screen type</td>
+    <td style="height: 19.5938px;">LCD</td>
+    <td style="height: 19.5938px;">LCD</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Passenger screen resolution</td>
+    <td style="height: 19.5938px;">3K</td>
+    <td style="height: 19.5938px;">3K</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Pixel density of the co-pilot screen</td>
+    <td style="height: 19.5938px;">210PPI</td>
+    <td style="height: 19.5938px;">210PPI</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Bluetooth/Car Phone</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Mobile phone interconnection/mapping</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Voice assistant wake-up word</td>
+    <td style="height: 19.5938px;">Ideal classmates</td>
+    <td style="height: 19.5938px;">Ideal classmates</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Voice wake-up word-free</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Voice wake-up recognition by region</td>
+    <td style="height: 19.5938px;">Four regions</td>
+    <td style="height: 19.5938px;">Four regions</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Continuous speech recognition</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">See and Say</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Gesture Control</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Voiceprint Recognition</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">App Store</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Car Intelligent Chip</td>
+    <td style="height: 39.1875px;">Qualcomm Snapdragon 8295P</td>
+    <td style="height: 39.1875px;">Qualcomm Snapdragon 8295P</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Vehicle system memory (GB)</td>
+    <td style="height: 19.5938px;">Twenty four</td>
+    <td style="height: 19.5938px;">Twenty four</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Vehicle system storage (GB)</td>
+    <td style="height: 19.5938px;">128</td>
+    <td style="height: 19.5938px;">128</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Multi-finger flying screen control</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    </tbody>
+    </table>
+
+
+    <div class="feature-title">Intelligence</div>
+    <table>
+    <colgroup> <col style="width: 30%;"> <col style="width: 35%;"> <col style="width: 35%;"> </colgroup>
+    <tbody>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Internet of Vehicles</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">4G/5G Network</td>
+    <td style="height: 19.5938px;">5G</td>
+    <td style="height: 19.5938px;">5G</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">OTA Update</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Wi-Fi Hotspot</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">In-car biometric monitoring system</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Car KTV</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Air</td>
+    <td style="height: 19.5938px;"></td>
+    <td style="height: 19.5938px;"></td>
+    </tr>
+    <tr style="height: 39.1875px;">
+    <td style="height: 39.1875px;">Air conditioning temperature control method</td>
+    <td style="height: 39.1875px;">Automatic air conditioning</td>
+    <td style="height: 39.1875px;">Automatic air conditioning</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Heat pump air conditioner</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Rear independent air conditioning</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Rear air vents</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Temperature zone control</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Car air purifier</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">In-car PM2.5 filter</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Negative ion generator</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Air Quality Monitoring</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    <tr style="height: 19.5938px;">
+    <td style="height: 19.5938px;">Car Refrigerator</td>
+    <td style="height: 19.5938px;">●</td>
+    <td style="height: 19.5938px;">●</td>
+    </tr>
+    </tbody>
+    </table>
+
+
+    <div class="feature-title">Features</div>
+    <table>
+    <colgroup> <col style="width: 30%;"> <col style="width: 35%;"> <col style="width: 35%;"> </colgroup>
+    <tbody>
+    <tr>
+    <td>ADAS Auxiliary Lights</td>
+    <td>-</td>
+    <td>●</td>
+    </tr>
+    </tbody>
+    </table>
+
+    
+    <h3 style="text-align: center;"><strong>360 Interior Virtual Tour</strong></h3>
+    <p><iframe src="https://m.dcdapp.com/motor/inapp/pano-new/inner.html?series_id=4540" height="800" width="1350" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0"></iframe> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"></p>
+    <h3 style="text-align: center;"><strong>Pictures</strong></h3>
+    <style>
+        /* Container to isolate new styles */
+        .car-customizer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
         }
 
-        function activateButton(button) {
-            const buttons = document.querySelectorAll('.model-button');
-            buttons.forEach(btn => btn.classList.remove('active'));
-
-            button.classList.add('active');
-
-            const isCharacteristicsChecked = document.getElementById('characteristics').checked;
-            const isPicturesChecked = document.getElementById('pictures').checked;
-
-            if (!isCharacteristicsChecked && !isPicturesChecked) {
-                document.querySelector('.message').style.display = 'block';
-            } else {
-                document.querySelector('.message').style.display = 'none';
-                showContent(button.getAttribute('data-table-id'));
-            }
+        /* Image gallery styling */
+        .car-customizer-container .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two images per row */
+            gap: 10px; /* Space between images */
+            width: 70%; /* Adjust this width as needed */
         }
 
-        function updateCheckmarks(check) {
-            const checkmarks = document.querySelectorAll('.checkbox-container input');
-            checkmarks.forEach(mark => mark.checked = false);
-
-            check.checked = true;
-
-            const activeButton = document.querySelector('.model-button.active');
-            if (activeButton) {
-                showContent(activeButton.getAttribute('data-table-id'));
-            }
+        .car-customizer-container .image-gallery img {
+            width: 100%; /* Make images fill their grid cell */
+            height: auto;
+            border-radius: 8px;
+            display: none; /* Hide all images initially */
         }
-    </script>
+
+        .car-customizer-container .image-gallery img.active {
+            display: block; /* Show the active images */
+        }
+
+        /* Sidebar styling */
+        .car-customizer-container .sidebar {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center the color boxes horizontally */
+            gap: 20px;
+            width: 20%; /* Adjust the sidebar width as needed */
+        }
+
+        /* Color box styling */
+        .car-customizer-container .color-box {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #ddd;
+            transition: transform 0.2s;
+        }
+
+        .car-customizer-container .color-box:hover {
+            transform: scale(1.1);
+        }
+
+        /* Price display styling */
+        .car-customizer-container .price {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center; /* Center the price text */
+        }
+
+        /* Specific color styling */
+        .car-customizer-container .color-blue { background-color: rgb(16, 147, 170); }
+        .car-customizer-container .color-red { background-color: rgb(99, 98, 98); }
+        .car-customizer-container .color-purple { background-color: rgb(187, 178, 187); }
+        .car-customizer-container .color-black { background-color: black; }
+        .car-customizer-container .color-white { background-color: white; border: 1px solid #ddd; } /* Border for visibility */
+    </style>
 </head>
 <body>
 
-    <div class="checkbox-container">
-        <label><input type="checkbox" id="characteristics" onclick="updateCheckmarks(this)"> Characteristics</label>
-        <label><input type="checkbox" id="pictures" onclick="updateCheckmarks(this)"> Pictures</label>
+<div class="car-customizer-container">
+    <!-- Image gallery -->
+    <div class="image-gallery">
+        <img src="https://cdn.shopify.com/s/files/1/0702/9627/3154/files/480x360_0_q95_c42_autohomecar__ChxoHWYhHVWAA5eOABUBZUBMFFo718.jpg?v=1724773259" alt="Blue Car" class="blue active">
+        <img src="https://cdn.shopify.com/s/files/1/0702/9627/3154/files/480x360_0_q95_c42_autohomecar__ChxoHWYhHVaAJhSCABFSD880H0k063.jpg?v=1724770725" alt="Blue Car Side View" class="blue active">
+        <img src="https://cdn.shopify.com/s/files/1/0702/9627/3154/files/480x360_0_q95_c42_autohomecar__ChxoHWYhHViAVvRuABXlwb8kgbE367.jpg?v=1724773343" alt="Blue Car" class="blue active">
+        <img src="https://cdn.shopify.com/s/files/1/0702/9627/3154/files/480x360_0_q95_c42_autohomecar__ChtlyGYhHVaALcv6ABZgu8XLqDs666.jpg?v=1724773400" alt="Blue Car Side View" class="blue active">
+        <img src="https://cdn.shopify.com/s/files/1/0702/9627/3154/files/480x360_0_q95_c42_autohomecar__ChtlyGYhHVKACRmjABQy64CLXEc770.jpg?v=1724770725" alt="Blue Car" class="blue active">
+        <img src="https://cdn.shopify.com/s/files/1/0702/9627/3154/files/480x360_0_q95_c42_autohomecar__ChxoHWYhHVOAPKWGABXojpJH6dA338.jpg?v=1724773372" alt="Blue Car Side View" class="blue active">
+
+
+        <img src="https://cdn.shopify.com/s/files/1/0000/0000/0001/files/red-car.jpg" alt="Red Car" class="red">
+        <img src="https://cdn.shopify.com/s/files/1/0000/0000/0001/files/red-car-2.jpg" alt="Red Car Side View" class="red">
+        <img src="https://cdn.shopify.com/s/files/1/0000/0000/0001/files/red-car.jpg" alt="Red Car" class="red">
+        <img src="https://cdn.shopify.com/s/files/1/0000/0000/0001/files/red-car-2.jpg" alt="Red Car Side View" class="red">
+        <img src="https://cdn.shopify.com/s/files/1/0000/0000/0001/files/red-car.jpg" alt="Red Car" class="red">
+        <img src="https://cdn.shopify.com/s/files/1/0000/0000/0001/files/red-car-2.jpg" alt="Red Car Side View" class="red">
+
+
+        <img src="https://cdn.shopify.com/s/files/1/0702/9627/3154/files/1400x0_1_q95_autohomecar__ChxoHWYhHE6Acal4ABV3iww5bzc902.jpg?v=1724773802" alt="Purple Car" class="purple">
+        <img src="https://cdn.shopify.com/s/files/1/0702/9627/3154/files/1400x0_1_q95_autohomecar__ChxoHWYhHE-AMD1UABJEEWpyKJM034.jpg?v=1724773802" alt="Purple Car Side View" class="purple">
+        <img src="https://cdn.shopify.com/s/files/1/0702/9627/3154/files/1400x0_1_q95_autohomecar__ChxoHWYhHEqAeCHqABDHpQEZ9AE787.jpg?v=1724773801" alt="Purple Car" class="purple">
+        <img src="https://cdn.shopify.com/s/files/1/0702/9627/3154/files/1400x0_1_q95_autohomecar__ChxoHmYhHE2AKWAbABSwdQ5h4lI165.jpg?v=1724773801" alt="Purple Car Side View" class="purple">
+        <img src="https://cdn.shopify.com/s/files/1/0702/9627/3154/files/1400x0_1_q95_autohomecar__ChxoHmYhHE-AO2ucABN-HkG5TB0465.jpg?v=1724773801" alt="Purple Car" class="purple">
+        <img src="https://cdn.shopify.com/s/files/1/0702/9627/3154/files/1400x0_1_q95_autohomecar__ChxoHWYhHE-AMyT9ABRdO3Z92s8976.jpg?v=1724773801" alt="Purple Car Side View" class="purple">
+
+
+        <img src="https://cdn.shopify.com/s/files/1/0702/9627/3154/files/1400x0_1_q95_autohomecar__ChtlyGYhHQuAEmm1ABfqtM5D0Y0890.jpg?v=1724773796" alt="Black Car" class="black">
+        <img src="https://cdn.shopify.com/s/files/1/0702/9627/3154/files/1400x0_1_q95_autohomecar__ChxoHmYhHQqAb-kpABc5D3vfX3o545.jpg?v=1724773796" alt="Black Car Side View" class="black">
+        <img src="https://cdn.shopify.com/s/files/1/0702/9627/3154/files/1400x0_1_q95_autohomecar__ChtlyGYhHQuAZOKCABbKlXYTeQI002.jpg?v=1724773796" alt="Black Car" class="black">
+        <img src="https://cdn.shopify.com/s/files/1/0702/9627/3154/files/1400x0_1_q95_autohomecar__ChxoHWYhHQuASYOqABTxDf1RB3Q296.jpg?v=1724773796" alt="Black Car Side View" class="black">
+        <img src="https://cdn.shopify.com/s/files/1/0702/9627/3154/files/1400x0_1_q95_autohomecar__ChxoHWYhHQqADhfRABb77s8q1lo204.jpg?v=1724773796" alt="Black Car" class="black">
+        <img src="https://cdn.shopify.com/s/files/1/0702/9627/3154/files/1400x0_1_q95_autohomecar__ChxoHmYhHQyAJ0vWABeY0vRr78g994.jpg?v=1724773796" alt="Black Car Side View" class="black">
+
+
+        <img src="https://cdn.shopify.com/s/files/1/0000/0000/0001/files/white-car.jpg" alt="White Car" class="white">
+        <img src="https://cdn.shopify.com/s/files/1/0000/0000/0001/files/white-car-2.jpg" alt="White Car Side View" class="white">
+        <img src="https://cdn.shopify.com/s/files/1/0000/0000/0001/files/white-car.jpg" alt="White Car" class="white">
+        <img src="https://cdn.shopify.com/s/files/1/0000/0000/0001/files/white-car-2.jpg" alt="White Car Side View" class="white">
+        <img src="https://cdn.shopify.com/s/files/1/0000/0000/0001/files/white-car.jpg" alt="White Car" class="white">
+        <img src="https://cdn.shopify.com/s/files/1/0000/0000/0001/files/white-car-2.jpg" alt="White Car Side View" class="white">
     </div>
 
-    <div class="button-container">
-        <button class="model-button" data-table-id="table1" onclick="activateButton(this)">2024 Honor Edition 520KM Luxury Model - 50.000$</button>
-        <button class="model-button" data-table-id="table2" onclick="activateButton(this)">2024 Honor Edition 520KM Premium - 50.000$</button>
-        <button class="model-button" data-table-id="table3" onclick="activateButton(this)">2024 Honor Edition 520KM Flagship Model - 50.000$</button>
-        <button class="model-button" data-table-id="table4" onclick="activateButton(this)">2024 Honor Edition 605KM Flagship PLUS - 50.000$</button>
+    <!-- Sidebar with color boxes and price -->
+    <div class="sidebar">
+        <div class="color-box color-blue" onclick="changeColor('blue')"></div>
+        <div class="color-box color-red" onclick="changeColor('red')"></div>
+        <div class="color-box color-purple" onclick="changeColor('purple')"></div>
+        <div class="color-box color-black" onclick="changeColor('black')"></div>
+        <div class="color-box color-white" onclick="changeColor('white')"></div>
+
+        <div id="price" class="price">$30,000</div> <!-- Default price -->
     </div>
+</div>
 
-    <div class="message">Please check what information you would like to see</div>
+<script>
+    const prices = {
+        blue: "$30,000",
+        red: "$31,000",
+        purple: "$32,000",
+        black: "$33,000",
+        white: "$34,000"
+    };
 
+    function changeColor(color) {
+        // Hide all images
+        const images = document.querySelectorAll('.image-gallery img');
+        images.forEach(img => img.classList.remove('active'));
 
-    <table id="table1" class="content-table">
-        <tr><th colspan="2">Basic Information - 2024 Honor Edition 520KM Luxury Model - 50.000$</th></tr>
-        <tr><td>Official guide price</td><td>149,800</td></tr>
-        <tr><td>Manufacturer</td><td>BYD</td></tr>
-        <tr><td>Level</td><td>Compact SUV</td></tr>
-        <tr><td>Energy Type</td><td>Pure Electric</td></tr>
-        <tr><td>Availability</td><td>2024.02</td></tr>
-        <tr><td>Electric Motor</td><td>Pure electric 204 horsepower</td></tr>
-        <tr><td>Pure electric range (km) Ministry of Industry and Information Technology</td><td>520</td></tr>
-        <tr><td>Pure electric range (km) CLTC</td><td>520</td></tr>
-        <tr><td>Charging time (hours)</td><td>Fast charge 0.5 hours Slow charge 10.2 hours</td></tr>
-        <tr><td>Fast charging capacity (%)</td><td>30-80</td></tr>
-        <tr><td>Maximum power (kW)</td><td>150(204Ps)</td></tr>
-        <tr><td>Maximum torque (N·m)</td><td>310</td></tr>
-        <tr><td>Gearbox</td><td>Electric vehicle single speed gearbox</td></tr>
-        <tr><td>Length x width x height (mm)</td><td>4785x1890x1660</td></tr>
-        <tr><td>Body structure</td><td>5-door 5-seater SUV</td></tr>
-        <tr><td>Maximum speed (km/h)</td><td>175</td></tr>
-        <tr><td>Official 0-50Km/h acceleration time (s)</td><td>4</td></tr>
-        <tr><td>Official 0-100km/h acceleration time (s)</td><td></td></tr>
-        <tr><td>Power consumption per 100 km (kWh/100km)</td><td>13.7kWh</td></tr>
-        <tr><td>Electric energy equivalent fuel consumption (L/100km)</td><td>1.55</td></tr>
-        <tr><td>Vehicle warranty period</td><td>6 years or 150,000 km</td></tr>
-        <tr><td>Estimated total maintenance cost for 60,000 km</td><td>1978.0 Yuan</td></tr>
-        
-        <tr><th colspan="2">Body</th></tr>
-        <tr><td>Length(mm)</td><td>4785</td></tr>
-        <tr><td>Width(mm)</td><td>1890</td></tr>
-        <tr><td>Height(mm)</td><td>1660</td></tr>
-        <tr><td>Wheelbase(mm)</td><td>2765</td></tr>
-        <tr><td>Front wheel track (mm)</td><td>1630</td></tr>
-        <tr><td>Rear wheelbase(mm)</td><td>1630</td></tr>
-        <tr><td>Body structure</td><td>SUV</td></tr>
-        <tr><td>Number of doors</td><td>5</td></tr>
-        <tr><td>Door opening method</td><td>Swing door</td></tr>
-        <tr><td>Number of seats</td><td>5</td></tr>
-        <tr><td>Curb weight(kg)</td><td>1920</td></tr>
-        <tr><td>Full load mass (kg)</td><td>2295</td></tr>
-        <tr><td>Luggage compartment volume (L)</td><td>574-1477</td></tr>
-        <tr><td>Minimum turning radius</td><td>5.55m</td></tr>
-        
-        <tr><th colspan="2">Electric Motor</th></tr>
-        <tr><td>Motor Description</td><td>Pure electric 204 horsepower</td></tr>
-        <tr><td>Motor Type</td><td>Permanent magnet/synchronous</td></tr>
-        <tr><td>Total motor power (kW)</td><td>150</td></tr>
-        <tr><td>Total motor horsepower (Ps)</td><td>204</td></tr>
-        <tr><td>Total torque of the motor (N·m)</td><td>310</td></tr>
-        <tr><td>Maximum power of front motor (kW)</td><td>150</td></tr>
-        <tr><td>Maximum torque of front motor (N·m)</td><td>310</td></tr>
-        <tr><td>Number of drive motors</td><td>Single motor</td></tr>
-        <tr><td>Motor layout</td><td>Pre</td></tr>
-        
-        <tr><th colspan="2">Charging Batteries</th></tr>
-        <tr><td>Battery Type</td><td>Lithium iron phosphate battery</td></tr>
-        <tr><td>Battery Feature Technology</td><td>Blade Battery</td></tr>
-        <tr><td>Battery brand</td><td>BYD</td></tr>
-        <tr><td>Battery Pack Warranty</td><td>No age or mileage limit for the first owner (liability exemption clause is subject to official regulations)</td></tr>
-        <tr><td>Battery capacity (kWh)</td><td>71.8</td></tr>
-        <tr><td>Battery energy density (Wh/kg)</td><td></td></tr>
-        <tr><td>Battery charging rate</td><td></td></tr>
-        <tr><td>Charging batteries</td><td>Fast charge 0.5 hours Slow charge 10.2 hours</td></tr>
-        <tr><td>Fast charging port</td><td></td></tr>
-        <tr><td>Maximum fast charging power (kw)</td><td>90</td></tr>
-        <tr><td>Fast charging port location</td><td></td></tr>
-        <tr><td>Slow charging port location</td><td></td></tr>
-        <tr><td>Battery Temperature Management System</td><td>●</td></tr>
-        <tr><td>Low temperature heating</td><td>●</td></tr>
-        <tr><td>Liquid Cooling</td><td></td></tr>
-        <tr><td>Single pedal mode</td><td>●</td></tr>
-        <tr><td>VTOL mobile power station function</td><td>●</td></tr>
-        <tr><td>VTOL maximum external discharge power</td><td>3.3kW</td></tr>
-        <tr><td>Minimum allowable value of external discharge power (%)</td><td>15</td></tr>
-        
-        <tr><th colspan="2">Gearbox</th></tr>
-        <tr><td>Gearbox Description</td><td>Electric vehicle single speed gearbox</td></tr>
-        <tr><td>Number of gears</td><td>1</td></tr>
-        <tr><td>Gearbox Type</td><td>Fixed gear ratio gearbox</td></tr>
-        
-        <tr><th colspan="2">Chassis/Steering</th></tr>
-        <tr><td>Drive mode</td><td>Front front drive</td></tr>
-        <tr><td>Front suspension type</td><td>McPherson independent suspension</td></tr>
-        <tr><td>Rear suspension type</td><td>Multi-link independent suspension</td></tr>
-        <tr><td>Steering type</td><td>Electric power assist</td></tr>
-        <tr><td>Vehicle structure</td><td>Load-bearing</td></tr>
-        
-        <tr><th colspan="2">Wheels/Brakes</th></tr>
-        <tr><td>Front brake type</td><td>Ventilated disc</td></tr>
-        <tr><td>Rear brake type</td><td>Solid disc</td></tr>
-        <tr><td>Parking brake type</td><td>Electronic parking brake</td></tr>
-        <tr><td>Front tire size</td><td>235/50 R19</td></tr>
-        <tr><td>Rear tire size</td><td>235/50 R19</td></tr>
-        
-        <tr><th colspan="2">Active Safety</th></tr>
-        <tr><td>ABS anti-lock braking system</td><td>●</td></tr>
-        <tr><td>Braking force distribution (EBD/CBC, etc.)</td><td>●</td></tr>
-        <tr><td>Brake assist (EBA/BA, etc.)</td><td>●</td></tr>
-        <tr><td>Traction control (TCS/ASR, etc.)</td><td>●</td></tr>
-        <tr><td>Vehicle stability system (ESP/DSC, etc.)</td><td>●</td></tr>
-        
-        <tr><th colspan="2">Internal Layout</th></tr>
-        <tr><td>Steering wheel material</td><td>Leather</td></tr>
-        <tr><td>Steering wheel adjustment</td><td>Up and down + front and back</td></tr>
-        <tr><td>Electric steering wheel adjustment</td><td></td></tr>
-        <tr><td>Steering wheel functions</td><td>Multi-function control</td></tr>
-        <tr><td>Driving computer screen</td><td>color</td></tr>
-        <tr><td>LCD instrument style</td><td>Full LCD</td></tr>
-        <tr><td>LCD instrument size (inch)</td><td>12.3</td></tr>
-        
-        <tr><th colspan="2">Comfort/Anti-Theft Configuration</th></tr>
-        <tr><td>Electric suction door</td><td></td></tr>
-        <tr><td>Electric tailgate</td><td></td></tr>
-        <tr><td>Sensor-type tailgate</td><td></td></tr>
-        <tr><td>Electric tailgate position memory</td><td></td></tr>
-        <tr><td>Central locking system in the car</td><td>●</td></tr>
-        <tr><td>Remote control key type</td><td>Smart remote control key</td></tr>
-        <tr><td>Mobile Bluetooth Key</td><td>●</td></tr>
-        <tr><td>NFC/RFID Key</td><td>●</td></tr>
-        <tr><td>Keyless entry</td><td>Front Row</td></tr>
-        <tr><td>Keyless start</td><td>●</td></tr>
-        <tr><td>Remote Start</td><td>●</td></tr>
-        <tr><td>Remote control mobile vehicle</td><td>●</td></tr>
-        <tr><td>Vehicle summon function</td><td></td></tr>
-        <tr><td>Head-up display (HUD)</td><td></td></tr>
-        <tr><td>Built-in driving recorder</td><td>●</td></tr>
-        <tr><td>Active Noise Cancellation</td><td></td></tr>
-        <tr><td>Wireless charging for mobile phones</td><td></td></tr>
-        <tr><td>110V/220V/230V power socket</td><td></td></tr>
-        <tr><td>Luggage compartment 12V power socket</td><td></td></tr>
-        
-        <tr><th colspan="2">Seat Configuration</th></tr>
-        <tr><td>Seat Material</td><td>imitation leather</td></tr>
-        <tr><td>Sports style seats</td><td></td></tr>
-        <tr><td>Seat Layout</td><td>2+3</td></tr>
-        <tr><td>Second row independent seats</td><td></td></tr>
-        <tr><td>Third row seats</td><td></td></tr>
-        <tr><td>Electric seat adjustment</td><td>Main driving seat</td></tr>
-        <tr><td>Overall adjustment of the driver's seat</td><td>Move forward and backward</td></tr>
-        <tr><td>Backrest angle</td><td>●</td></tr>
-        <tr><td>Height adjustment</td><td>●</td></tr>
-        <tr><td>Driver's seat partial adjustment</td><td></td></tr>
-        <tr><td>Passenger seat overall adjustment</td><td>Move forward and backward</td></tr>
-        <tr><td>Passenger seat partial adjustment</td><td></td></tr>
-        <tr><td>Second row seat overall adjustment</td><td>Backrest angle adjustment</td></tr>
-        <tr><td>Second row seat partial adjustment</td><td></td></tr>
-        <tr><td>Front seat functions</td><td></td></tr>
-        <tr><td>Second row seat functions</td><td></td></tr>
-        <tr><td>Third row seat functions</td><td></td></tr>
-        <tr><td>Boss Key</td><td></td></tr>
-        <tr><td>Front/rear armrests</td><td>Front Row</td></tr>
-        <tr><td>Back row</td><td>●</td></tr>
-        <tr><td>Rear cup holder</td><td>Standard</td></tr>
-    </table>
+        // Show the selected color images
+        const selectedImages = document.querySelectorAll(`.image-gallery .${color}`);
+        selectedImages.forEach(img => img.classList.add('active'));
 
-    <div id="table1-gallery" class="image-gallery">
-        <img src="https://p3.dcarimg.com/img/motor-mis-img/8fb437e02dff0fe983b8efd38602621e~2508x0.webp" alt="2024 Honor Edition 520KM Luxury Model Image 1">
-        <img src="https://p3.dcarimg.com/img/motor-mis-img/32f69bd800b7cf6c69c45c5a17de44c6~2508x0.webp" alt="2024 Honor Edition 520KM Luxury Model Image 2">
-        <img src="https://p3.dcarimg.com/img/motor-mis-img/336d6fc73c7366376f4547cdeb7b1b7c~2508x0.webp" alt="2024 Honor Edition 520KM Luxury Model Image 3">
-        <img src="https://p3.dcarimg.com/img/motor-mis-img/1405842b50c1b9e862bb13ae1322eba8~2508x0.webp" alt="2024 Honor Edition 520KM Luxury Model Image 4">
-        <img src="https://p3.dcarimg.com/img/motor-mis-img/955c34b1b520061b0cecbfaac5445dcb~2508x0.webp" alt="2024 Honor Edition 520KM Luxury Model Image 5">
-        <img src="https://p3.dcarimg.com/img/motor-mis-img/76574f8918737ad0eb7cfabf5cf8c579~2508x0.webp" alt="2024 Honor Edition 520KM Luxury Model Image 6">
-        <img src="https://p3.dcarimg.com/img/motor-mis-img/3db7ff79ca45497a08022599ed2278e2~2508x0.webp" alt="2024 Honor Edition 520KM Luxury Model Image 7">
+        // Update the price
+        document.getElementById('price').textContent = prices[color];
+    }
+</script>
+
+</body>
+    </div>
     </div>
     
-    <table id="table2" class="content-table">
-        <tr><th colspan="2">Basic Information - 2024 Honor Edition 520KM Premium - 50.000$</th></tr>
-        <tr><td>Official guide price</td><td>145,800</td></tr>
-        <tr><td>Manufacturer</td><td>BYD</td></tr>
-        <tr><td>Level</td><td>Compact SUV</td></tr>
-        <tr><td>Energy Type</td><td>Pure Electric</td></tr>
-        <tr><td>Availability</td><td>2024.02</td></tr>
-        <tr><td>Electric Motor</td><td>Pure electric 204 horsepower</td></tr>
-        <tr><td>Pure electric range (km) Ministry of Industry and Information Technology</td><td>520</td></tr>
-        <tr><td>Pure electric range (km) CLTC</td><td>520</td></tr>
-        <tr><td>Charging time (hours)</td><td>Fast charge 0.5 hours Slow charge 10.2 hours</td></tr>
-        <tr><td>Fast charging capacity (%)</td><td>30-80</td></tr>
-        <tr><td>Maximum power (kW)</td><td>150(204Ps)</td></tr>
-        <tr><td>Maximum torque (N·m)</td><td>310</td></tr>
-        <tr><td>Gearbox</td><td>Electric vehicle single speed gearbox</td></tr>
-        <tr><td>Length x width x height (mm)</td><td>4785x1890x1660</td></tr>
-        <tr><td>Body structure</td><td>5-door 5-seater SUV</td></tr>
-        <tr><td>Maximum speed (km/h)</td><td>175</td></tr>
-        <tr><td>Official 0-50Km/h acceleration time (s)</td><td>4</td></tr>
-        <tr><td>Official 0-100km/h acceleration time (s)</td><td></td></tr>
-        <tr><td>Power consumption per 100 km (kWh/100km)</td><td>13.7kWh</td></tr>
-        <tr><td>Electric energy equivalent fuel consumption (L/100km)</td><td>1.55</td></tr>
-        <tr><td>Vehicle warranty period</td><td>6 years or 150,000 km</td></tr>
-        <tr><td>Estimated total maintenance cost for 60,000 km</td><td>1978.0 Yuan</td></tr>
-        
-        <tr><th colspan="2">Body</th></tr>
-        <tr><td>Length(mm)</td><td>4785</td></tr>
-        <tr><td>Width(mm)</td><td>1890</td></tr>
-        <tr><td>Height(mm)</td><td>1660</td></tr>
-        <tr><td>Wheelbase(mm)</td><td>2765</td></tr>
-        <tr><td>Front wheel track (mm)</td><td>1630</td></tr>
-        <tr><td>Rear wheelbase(mm)</td><td>1630</td></tr>
-        <tr><td>Body structure</td><td>SUV</td></tr>
-        <tr><td>Number of doors</td><td>5</td></tr>
-        <tr><td>Door opening method</td><td>Swing door</td></tr>
-        <tr><td>Number of seats</td><td>5</td></tr>
-        <tr><td>Curb weight(kg)</td><td>1920</td></tr>
-        <tr><td>Full load mass (kg)</td><td>2295</td></tr>
-        <tr><td>Luggage compartment volume (L)</td><td>574-1477</td></tr>
-        <tr><td>Minimum turning radius</td><td>5.55m</td></tr>
-        
-        <tr><th colspan="2">Electric Motor</th></tr>
-        <tr><td>Motor Description</td><td>Pure electric 204 horsepower</td></tr>
-        <tr><td>Motor Type</td><td>Permanent magnet/synchronous</td></tr>
-        <tr><td>Total motor power (kW)</td><td>150</td></tr>
-        <tr><td>Total motor horsepower (Ps)</td><td>204</td></tr>
-        <tr><td>Total torque of the motor (N·m)</td><td>310</td></tr>
-        <tr><td>Maximum power of front motor (kW)</td><td>150</td></tr>
-        <tr><td>Maximum torque of front motor (N·m)</td><td>310</td></tr>
-        <tr><td>Number of drive motors</td><td>Single motor</td></tr>
-        <tr><td>Motor layout</td><td>Pre</td></tr>
-        
-        <tr><th colspan="2">Charging Batteries</th></tr>
-        <tr><td>Battery Type</td><td>Lithium iron phosphate battery</td></tr>
-        <tr><td>Battery Feature Technology</td><td>Blade Battery</td></tr>
-        <tr><td>Battery brand</td><td>BYD</td></tr>
-        <tr><td>Battery Pack Warranty</td><td>No age or mileage limit for the first owner (liability exemption clause is subject to official regulations)</td></tr>
-        <tr><td>Battery capacity (kWh)</td><td>71.8</td></tr>
-        <tr><td>Battery energy density (Wh/kg)</td><td></td></tr>
-        <tr><td>Battery charging rate</td><td></td></tr>
-        <tr><td>Charging batteries</td><td>Fast charge 0.5 hours Slow charge 10.2 hours</td></tr>
-        <tr><td>Fast charging port</td><td></td></tr>
-        <tr><td>Maximum fast charging power (kw)</td><td>90</td></tr>
-        <tr><td>Fast charging port location</td><td></td></tr>
-        <tr><td>Slow charging port location</td><td></td></tr>
-        <tr><td>Battery Temperature Management System</td><td>●</td></tr>
-        <tr><td>Low temperature heating</td><td>●</td></tr>
-        <tr><td>Liquid Cooling</td><td></td></tr>
-        <tr><td>Single pedal mode</td><td>●</td></tr>
-        <tr><td>VTOL mobile power station function</td><td>●</td></tr>
-        <tr><td>VTOL maximum external discharge power</td><td>3.3kW</td></tr>
-        <tr><td>Minimum allowable value of external discharge power (%)</td><td>15</td></tr>
-        
-        <tr><th colspan="2">Gearbox</th></tr>
-        <tr><td>Gearbox Description</td><td>Electric vehicle single speed gearbox</td></tr>
-        <tr><td>Number of gears</td><td>1</td></tr>
-        <tr><td>Gearbox Type</td><td>Fixed gear ratio gearbox</td></tr>
-        
-        <tr><th colspan="2">Chassis/Steering</th></tr>
-        <tr><td>Drive mode</td><td>Front front drive</td></tr>
-        <tr><td>Front suspension type</td><td>McPherson independent suspension</td></tr>
-        <tr><td>Rear suspension type</td><td>Multi-link independent suspension</td></tr>
-        <tr><td>Steering type</td><td>Electric power assist</td></tr>
-        <tr><td>Vehicle structure</td><td>Load-bearing</td></tr>
-        
-        <tr><th colspan="2">Wheels/Brakes</th></tr>
-        <tr><td>Front brake type</td><td>Ventilated disc</td></tr>
-        <tr><td>Rear brake type</td><td>Solid disc</td></tr>
-        <tr><td>Parking brake type</td><td>Electronic parking brake</td></tr>
-        <tr><td>Front tire size</td><td>235/50 R19</td></tr>
-        <tr><td>Rear tire size</td><td>235/50 R19</td></tr>
-        
-        <tr><th colspan="2">Active Safety</th></tr>
-        <tr><td>ABS anti-lock braking system</td><td>●</td></tr>
-        <tr><td>Braking force distribution (EBD/CBC, etc.)</td><td>●</td></tr>
-        <tr><td>Brake assist (EBA/BA, etc.)</td><td>●</td></tr>
-        <tr><td>Traction control (TCS/ASR, etc.)</td><td>●</td></tr>
-        <tr><td>Vehicle stability system (ESP/DSC, etc.)</td><td>●</td></tr>
-        
-        <tr><th colspan="2">Internal Layout</th></tr>
-        <tr><td>Steering wheel material</td><td>Leather</td></tr>
-        <tr><td>Steering wheel adjustment</td><td>Up and down + front and back</td></tr>
-        <tr><td>Electric steering wheel adjustment</td><td></td></tr>
-        <tr><td>Steering wheel functions</td><td>Multi-function control</td></tr>
-        <tr><td>Driving computer screen</td><td>color</td></tr>
-        <tr><td>LCD instrument style</td><td>Full LCD</td></tr>
-        <tr><td>LCD instrument size (inch)</td><td>12.3</td></tr>
-        
-        <tr><th colspan="2">Comfort/Anti-Theft Configuration</th></tr>
-        <tr><td>Electric suction door</td><td></td></tr>
-        <tr><td>Electric tailgate</td><td></td></tr>
-        <tr><td>Sensor-type tailgate</td><td></td></tr>
-        <tr><td>Electric tailgate position memory</td><td></td></tr>
-        <tr><td>Central locking system in the car</td><td>●</td></tr>
-        <tr><td>Remote control key type</td><td>Smart remote control key</td></tr>
-        <tr><td>Mobile Bluetooth Key</td><td>●</td></tr>
-        <tr><td>NFC/RFID Key</td><td>●</td></tr>
-        <tr><td>Keyless entry</td><td>Front Row</td></tr>
-        <tr><td>Keyless start</td><td>●</td></tr>
-        <tr><td>Remote Start</td><td>●</td></tr>
-        <tr><td>Remote control mobile vehicle</td><td>●</td></tr>
-        <tr><td>Vehicle summon function</td><td></td></tr>
-        <tr><td>Head-up display (HUD)</td><td></td></tr>
-        <tr><td>Built-in driving recorder</td><td>●</td></tr>
-        <tr><td>Active Noise Cancellation</td><td></td></tr>
-        <tr><td>Wireless charging for mobile phones</td><td></td></tr>
-        <tr><td>110V/220V/230V power socket</td><td></td></tr>
-        <tr><td>Luggage compartment 12V power socket</td><td></td></tr>
-        
-        <tr><th colspan="2">Seat Configuration</th></tr>
-        <tr><td>Seat Material</td><td>imitation leather</td></tr>
-        <tr><td>Sports style seats</td><td></td></tr>
-        <tr><td>Seat Layout</td><td>2+3</td></tr>
-        <tr><td>Second row independent seats</td><td></td></tr>
-        <tr><td>Third row seats</td><td></td></tr>
-        <tr><td>Electric seat adjustment</td><td>Main driving seat</td></tr>
-        <tr><td>Overall adjustment of the driver's seat</td><td>Move forward and backward</td></tr>
-        <tr><td>Backrest angle</td><td>●</td></tr>
-        <tr><td>Height adjustment</td><td>●</td></tr>
-        <tr><td>Driver's seat partial adjustment</td><td></td></tr>
-        <tr><td>Passenger seat overall adjustment</td><td>Move forward and backward</td></tr>
-        <tr><td>Passenger seat partial adjustment</td><td></td></tr>
-        <tr><td>Second row seat overall adjustment</td><td>Backrest angle adjustment</td></tr>
-        <tr><td>Second row seat partial adjustment</td><td></td></tr>
-        <tr><td>Front seat functions</td><td></td></tr>
-        <tr><td>Second row seat functions</td><td></td></tr>
-        <tr><td>Third row seat functions</td><td></td></tr>
-        <tr><td>Boss Key</td><td></td></tr>
-        <tr><td>Front/rear armrests</td><td>Front Row</td></tr>
-        <tr><td>Back row</td><td>●</td></tr>
-        <tr><td>Rear cup holder</td><td>Standard</td></tr>
-    </table>
-
-    <div id="table2-gallery" class="image-gallery">
-        <img src="image4.jpg" alt="2024 Honor Edition 520KM Premium Image 1">
-        <img src="image5.jpg" alt="2024 Honor Edition 520KM Premium Image 2">
-        <img src="image6.jpg" alt="2024 Honor Edition 520KM Premium Image 3">
-    </div>
-
-    <table id="table3" class="content-table">
-        <tr><th colspan="2">Basic Information - 2024 Honor Edition 520KM Flagship Model - 50.000$</th></tr>
-        <tr><td>Official guide price</td><td>149,800</td></tr>
-        <tr><td>Manufacturer</td><td>BYD</td></tr>
-        <tr><td>Level</td><td>Compact SUV</td></tr>
-        <tr><td>Energy Type</td><td>Pure Electric</td></tr>
-        <tr><td>Availability</td><td>2024.02</td></tr>
-        <tr><td>Electric Motor</td><td>Pure electric 204 horsepower</td></tr>
-        <tr><td>Pure electric range (km) Ministry of Industry and Information Technology</td><td>520</td></tr>
-        <tr><td>Pure electric range (km) CLTC</td><td>520</td></tr>
-        <tr><td>Charging time (hours)</td><td>Fast charge 0.5 hours Slow charge 10.2 hours</td></tr>
-        <tr><td>Fast charging capacity (%)</td><td>30-80</td></tr>
-        <tr><td>Maximum power (kW)</td><td>150(204Ps)</td></tr>
-        <tr><td>Maximum torque (N·m)</td><td>310</td></tr>
-        <tr><td>Gearbox</td><td>Electric vehicle single speed gearbox</td></tr>
-        <tr><td>Length x width x height (mm)</td><td>4785x1890x1660</td></tr>
-        <tr><td>Body structure</td><td>5-door 5-seater SUV</td></tr>
-        <tr><td>Maximum speed (km/h)</td><td>175</td></tr>
-        <tr><td>Official 0-50Km/h acceleration time (s)</td><td>4</td></tr>
-        <tr><td>Official 0-100km/h acceleration time (s)</td><td></td></tr>
-        <tr><td>Power consumption per 100 km (kWh/100km)</td><td>13.7kWh</td></tr>
-        <tr><td>Electric energy equivalent fuel consumption (L/100km)</td><td>1.55</td></tr>
-        <tr><td>Vehicle warranty period</td><td>6 years or 150,000 km</td></tr>
-        <tr><td>Estimated total maintenance cost for 60,000 km</td><td>1978.0 Yuan</td></tr>
-        
-        <tr><th colspan="2">Body</th></tr>
-        <tr><td>Length(mm)</td><td>4785</td></tr>
-        <tr><td>Width(mm)</td><td>1890</td></tr>
-        <tr><td>Height(mm)</td><td>1660</td></tr>
-        <tr><td>Wheelbase(mm)</td><td>2765</td></tr>
-        <tr><td>Front wheel track (mm)</td><td>1630</td></tr>
-        <tr><td>Rear wheelbase(mm)</td><td>1630</td></tr>
-        <tr><td>Body structure</td><td>SUV</td></tr>
-        <tr><td>Number of doors</td><td>5</td></tr>
-        <tr><td>Door opening method</td><td>Swing door</td></tr>
-        <tr><td>Number of seats</td><td>5</td></tr>
-        <tr><td>Curb weight(kg)</td><td>1920</td></tr>
-        <tr><td>Full load mass (kg)</td><td>2295</td></tr>
-        <tr><td>Luggage compartment volume (L)</td><td>574-1477</td></tr>
-        <tr><td>Minimum turning radius</td><td>5.55m</td></tr>
-        
-        <tr><th colspan="2">Electric Motor</th></tr>
-        <tr><td>Motor Description</td><td>Pure electric 204 horsepower</td></tr>
-        <tr><td>Motor Type</td><td>Permanent magnet/synchronous</td></tr>
-        <tr><td>Total motor power (kW)</td><td>150</td></tr>
-        <tr><td>Total motor horsepower (Ps)</td><td>204</td></tr>
-        <tr><td>Total torque of the motor (N·m)</td><td>310</td></tr>
-        <tr><td>Maximum power of front motor (kW)</td><td>150</td></tr>
-        <tr><td>Maximum torque of front motor (N·m)</td><td>310</td></tr>
-        <tr><td>Number of drive motors</td><td>Single motor</td></tr>
-        <tr><td>Motor layout</td><td>Pre</td></tr>
-        
-        <tr><th colspan="2">Charging Batteries</th></tr>
-        <tr><td>Battery Type</td><td>Lithium iron phosphate battery</td></tr>
-        <tr><td>Battery Feature Technology</td><td>Blade Battery</td></tr>
-        <tr><td>Battery brand</td><td>BYD</td></tr>
-        <tr><td>Battery Pack Warranty</td><td>No age or mileage limit for the first owner (liability exemption clause is subject to official regulations)</td></tr>
-        <tr><td>Battery capacity (kWh)</td><td>71.8</td></tr>
-        <tr><td>Battery energy density (Wh/kg)</td><td></td></tr>
-        <tr><td>Battery charging rate</td><td></td></tr>
-        <tr><td>Charging batteries</td><td>Fast charge 0.5 hours Slow charge 10.2 hours</td></tr>
-        <tr><td>Fast charging port</td><td></td></tr>
-        <tr><td>Maximum fast charging power (kw)</td><td>90</td></tr>
-        <tr><td>Fast charging port location</td><td></td></tr>
-        <tr><td>Slow charging port location</td><td></td></tr>
-        <tr><td>Battery Temperature Management System</td><td>●</td></tr>
-        <tr><td>Low temperature heating</td><td>●</td></tr>
-        <tr><td>Liquid Cooling</td><td></td></tr>
-        <tr><td>Single pedal mode</td><td>●</td></tr>
-        <tr><td>VTOL mobile power station function</td><td>●</td></tr>
-        <tr><td>VTOL maximum external discharge power</td><td>3.3kW</td></tr>
-        <tr><td>Minimum allowable value of external discharge power (%)</td><td>15</td></tr>
-        
-        <tr><th colspan="2">Gearbox</th></tr>
-        <tr><td>Gearbox Description</td><td>Electric vehicle single speed gearbox</td></tr>
-        <tr><td>Number of gears</td><td>1</td></tr>
-        <tr><td>Gearbox Type</td><td>Fixed gear ratio gearbox</td></tr>
-        
-        <tr><th colspan="2">Chassis/Steering</th></tr>
-        <tr><td>Drive mode</td><td>Front front drive</td></tr>
-        <tr><td>Front suspension type</td><td>McPherson independent suspension</td></tr>
-        <tr><td>Rear suspension type</td><td>Multi-link independent suspension</td></tr>
-        <tr><td>Steering type</td><td>Electric power assist</td></tr>
-        <tr><td>Vehicle structure</td><td>Load-bearing</td></tr>
-        
-        <tr><th colspan="2">Wheels/Brakes</th></tr>
-        <tr><td>Front brake type</td><td>Ventilated disc</td></tr>
-        <tr><td>Rear brake type</td><td>Solid disc</td></tr>
-        <tr><td>Parking brake type</td><td>Electronic parking brake</td></tr>
-        <tr><td>Front tire size</td><td>235/50 R19</td></tr>
-        <tr><td>Rear tire size</td><td>235/50 R19</td></tr>
-        
-        <tr><th colspan="2">Active Safety</th></tr>
-        <tr><td>ABS anti-lock braking system</td><td>●</td></tr>
-        <tr><td>Braking force distribution (EBD/CBC, etc.)</td><td>●</td></tr>
-        <tr><td>Brake assist (EBA/BA, etc.)</td><td>●</td></tr>
-        <tr><td>Traction control (TCS/ASR, etc.)</td><td>●</td></tr>
-        <tr><td>Vehicle stability system (ESP/DSC, etc.)</td><td>●</td></tr>
-        
-        <tr><th colspan="2">Internal Layout</th></tr>
-        <tr><td>Steering wheel material</td><td>Leather</td></tr>
-        <tr><td>Steering wheel adjustment</td><td>Up and down + front and back</td></tr>
-        <tr><td>Electric steering wheel adjustment</td><td></td></tr>
-        <tr><td>Steering wheel functions</td><td>Multi-function control</td></tr>
-        <tr><td>Driving computer screen</td><td>color</td></tr>
-        <tr><td>LCD instrument style</td><td>Full LCD</td></tr>
-        <tr><td>LCD instrument size (inch)</td><td>12.3</td></tr>
-        
-        <tr><th colspan="2">Comfort/Anti-Theft Configuration</th></tr>
-        <tr><td>Electric suction door</td><td></td></tr>
-        <tr><td>Electric tailgate</td><td></td></tr>
-        <tr><td>Sensor-type tailgate</td><td></td></tr>
-        <tr><td>Electric tailgate position memory</td><td></td></tr>
-        <tr><td>Central locking system in the car</td><td>●</td></tr>
-        <tr><td>Remote control key type</td><td>Smart remote control key</td></tr>
-        <tr><td>Mobile Bluetooth Key</td><td>●</td></tr>
-        <tr><td>NFC/RFID Key</td><td>●</td></tr>
-        <tr><td>Keyless entry</td><td>Front Row</td></tr>
-        <tr><td>Keyless start</td><td>●</td></tr>
-        <tr><td>Remote Start</td><td>●</td></tr>
-        <tr><td>Remote control mobile vehicle</td><td>●</td></tr>
-        <tr><td>Vehicle summon function</td><td></td></tr>
-        <tr><td>Head-up display (HUD)</td><td></td></tr>
-        <tr><td>Built-in driving recorder</td><td>●</td></tr>
-        <tr><td>Active Noise Cancellation</td><td></td></tr>
-        <tr><td>Wireless charging for mobile phones</td><td></td></tr>
-        <tr><td>110V/220V/230V power socket</td><td></td></tr>
-        <tr><td>Luggage compartment 12V power socket</td><td></td></tr>
-        
-        <tr><th colspan="2">Seat Configuration</th></tr>
-        <tr><td>Seat Material</td><td>imitation leather</td></tr>
-        <tr><td>Sports style seats</td><td></td></tr>
-        <tr><td>Seat Layout</td><td>2+3</td></tr>
-        <tr><td>Second row independent seats</td><td></td></tr>
-        <tr><td>Third row seats</td><td></td></tr>
-        <tr><td>Electric seat adjustment</td><td>Main driving seat</td></tr>
-        <tr><td>Overall adjustment of the driver's seat</td><td>Move forward and backward</td></tr>
-        <tr><td>Backrest angle</td><td>●</td></tr>
-        <tr><td>Height adjustment</td><td>●</td></tr>
-        <tr><td>Driver's seat partial adjustment</td><td></td></tr>
-        <tr><td>Passenger seat overall adjustment</td><td>Move forward and backward</td></tr>
-        <tr><td>Passenger seat partial adjustment</td><td></td></tr>
-        <tr><td>Second row seat overall adjustment</td><td>Backrest angle adjustment</td></tr>
-        <tr><td>Second row seat partial adjustment</td><td></td></tr>
-        <tr><td>Front seat functions</td><td></td></tr>
-        <tr><td>Second row seat functions</td><td></td></tr>
-        <tr><td>Third row seat functions</td><td></td></tr>
-        <tr><td>Boss Key</td><td></td></tr>
-        <tr><td>Front/rear armrests</td><td>Front Row</td></tr>
-        <tr><td>Back row</td><td>●</td></tr>
-        <tr><td>Rear cup holder</td><td>Standard</td></tr>
-    </table>
-
-    <div id="table3-gallery" class="image-gallery">
-        <img src="image7.jpg" alt="2024 Honor Edition 520KM Flagship Model Image 1">
-        <img src="image8.jpg" alt="2024 Honor Edition 520KM Flagship Model Image 2">
-        <img src="image9.jpg" alt="2024 Honor Edition 520KM Flagship Model Image 3">
-    </div>
-
-    <table id="table4" class="content-table">
-        <tr><th colspan="2">Basic Information - 2024 Honor Edition 605KM Flagship PLUS - 50.000$<</th></tr>
-        <tr><td>Official guide price</td><td>149,800</td></tr>
-        <tr><td>Manufacturer</td><td>BYD</td></tr>
-        <tr><td>Level</td><td>Compact SUV</td></tr>
-        <tr><td>Energy Type</td><td>Pure Electric</td></tr>
-        <tr><td>Availability</td><td>2024.02</td></tr>
-        <tr><td>Electric Motor</td><td>Pure electric 204 horsepower</td></tr>
-        <tr><td>Pure electric range (km) Ministry of Industry and Information Technology</td><td>520</td></tr>
-        <tr><td>Pure electric range (km) CLTC</td><td>520</td></tr>
-        <tr><td>Charging time (hours)</td><td>Fast charge 0.5 hours Slow charge 10.2 hours</td></tr>
-        <tr><td>Fast charging capacity (%)</td><td>30-80</td></tr>
-        <tr><td>Maximum power (kW)</td><td>150(204Ps)</td></tr>
-        <tr><td>Maximum torque (N·m)</td><td>310</td></tr>
-        <tr><td>Gearbox</td><td>Electric vehicle single speed gearbox</td></tr>
-        <tr><td>Length x width x height (mm)</td><td>4785x1890x1660</td></tr>
-        <tr><td>Body structure</td><td>5-door 5-seater SUV</td></tr>
-        <tr><td>Maximum speed (km/h)</td><td>175</td></tr>
-        <tr><td>Official 0-50Km/h acceleration time (s)</td><td>4</td></tr>
-        <tr><td>Official 0-100km/h acceleration time (s)</td><td></td></tr>
-        <tr><td>Power consumption per 100 km (kWh/100km)</td><td>13.7kWh</td></tr>
-        <tr><td>Electric energy equivalent fuel consumption (L/100km)</td><td>1.55</td></tr>
-        <tr><td>Vehicle warranty period</td><td>6 years or 150,000 km</td></tr>
-        <tr><td>Estimated total maintenance cost for 60,000 km</td><td>1978.0 Yuan</td></tr>
-        
-        <tr><th colspan="2">Body</th></tr>
-        <tr><td>Length(mm)</td><td>4785</td></tr>
-        <tr><td>Width(mm)</td><td>1890</td></tr>
-        <tr><td>Height(mm)</td><td>1660</td></tr>
-        <tr><td>Wheelbase(mm)</td><td>2765</td></tr>
-        <tr><td>Front wheel track (mm)</td><td>1630</td></tr>
-        <tr><td>Rear wheelbase(mm)</td><td>1630</td></tr>
-        <tr><td>Body structure</td><td>SUV</td></tr>
-        <tr><td>Number of doors</td><td>5</td></tr>
-        <tr><td>Door opening method</td><td>Swing door</td></tr>
-        <tr><td>Number of seats</td><td>5</td></tr>
-        <tr><td>Curb weight(kg)</td><td>1920</td></tr>
-        <tr><td>Full load mass (kg)</td><td>2295</td></tr>
-        <tr><td>Luggage compartment volume (L)</td><td>574-1477</td></tr>
-        <tr><td>Minimum turning radius</td><td>5.55m</td></tr>
-        
-        <tr><th colspan="2">Electric Motor</th></tr>
-        <tr><td>Motor Description</td><td>Pure electric 204 horsepower</td></tr>
-        <tr><td>Motor Type</td><td>Permanent magnet/synchronous</td></tr>
-        <tr><td>Total motor power (kW)</td><td>150</td></tr>
-        <tr><td>Total motor horsepower (Ps)</td><td>204</td></tr>
-        <tr><td>Total torque of the motor (N·m)</td><td>310</td></tr>
-        <tr><td>Maximum power of front motor (kW)</td><td>150</td></tr>
-        <tr><td>Maximum torque of front motor (N·m)</td><td>310</td></tr>
-        <tr><td>Number of drive motors</td><td>Single motor</td></tr>
-        <tr><td>Motor layout</td><td>Pre</td></tr>
-        
-        <tr><th colspan="2">Charging Batteries</th></tr>
-        <tr><td>Battery Type</td><td>Lithium iron phosphate battery</td></tr>
-        <tr><td>Battery Feature Technology</td><td>Blade Battery</td></tr>
-        <tr><td>Battery brand</td><td>BYD</td></tr>
-        <tr><td>Battery Pack Warranty</td><td>No age or mileage limit for the first owner (liability exemption clause is subject to official regulations)</td></tr>
-        <tr><td>Battery capacity (kWh)</td><td>71.8</td></tr>
-        <tr><td>Battery energy density (Wh/kg)</td><td></td></tr>
-        <tr><td>Battery charging rate</td><td></td></tr>
-        <tr><td>Charging batteries</td><td>Fast charge 0.5 hours Slow charge 10.2 hours</td></tr>
-        <tr><td>Fast charging port</td><td></td></tr>
-        <tr><td>Maximum fast charging power (kw)</td><td>90</td></tr>
-        <tr><td>Fast charging port location</td><td></td></tr>
-        <tr><td>Slow charging port location</td><td></td></tr>
-        <tr><td>Battery Temperature Management System</td><td>●</td></tr>
-        <tr><td>Low temperature heating</td><td>●</td></tr>
-        <tr><td>Liquid Cooling</td><td></td></tr>
-        <tr><td>Single pedal mode</td><td>●</td></tr>
-        <tr><td>VTOL mobile power station function</td><td>●</td></tr>
-        <tr><td>VTOL maximum external discharge power</td><td>3.3kW</td></tr>
-        <tr><td>Minimum allowable value of external discharge power (%)</td><td>15</td></tr>
-        
-        <tr><th colspan="2">Gearbox</th></tr>
-        <tr><td>Gearbox Description</td><td>Electric vehicle single speed gearbox</td></tr>
-        <tr><td>Number of gears</td><td>1</td></tr>
-        <tr><td>Gearbox Type</td><td>Fixed gear ratio gearbox</td></tr>
-        
-        <tr><th colspan="2">Chassis/Steering</th></tr>
-        <tr><td>Drive mode</td><td>Front front drive</td></tr>
-        <tr><td>Front suspension type</td><td>McPherson independent suspension</td></tr>
-        <tr><td>Rear suspension type</td><td>Multi-link independent suspension</td></tr>
-        <tr><td>Steering type</td><td>Electric power assist</td></tr>
-        <tr><td>Vehicle structure</td><td>Load-bearing</td></tr>
-        
-        <tr><th colspan="2">Wheels/Brakes</th></tr>
-        <tr><td>Front brake type</td><td>Ventilated disc</td></tr>
-        <tr><td>Rear brake type</td><td>Solid disc</td></tr>
-        <tr><td>Parking brake type</td><td>Electronic parking brake</td></tr>
-        <tr><td>Front tire size</td><td>235/50 R19</td></tr>
-        <tr><td>Rear tire size</td><td>235/50 R19</td></tr>
-        
-        <tr><th colspan="2">Active Safety</th></tr>
-        <tr><td>ABS anti-lock braking system</td><td>●</td></tr>
-        <tr><td>Braking force distribution (EBD/CBC, etc.)</td><td>●</td></tr>
-        <tr><td>Brake assist (EBA/BA, etc.)</td><td>●</td></tr>
-        <tr><td>Traction control (TCS/ASR, etc.)</td><td>●</td></tr>
-        <tr><td>Vehicle stability system (ESP/DSC, etc.)</td><td>●</td></tr>
-        
-        <tr><th colspan="2">Internal Layout</th></tr>
-        <tr><td>Steering wheel material</td><td>Leather</td></tr>
-        <tr><td>Steering wheel adjustment</td><td>Up and down + front and back</td></tr>
-        <tr><td>Electric steering wheel adjustment</td><td></td></tr>
-        <tr><td>Steering wheel functions</td><td>Multi-function control</td></tr>
-        <tr><td>Driving computer screen</td><td>color</td></tr>
-        <tr><td>LCD instrument style</td><td>Full LCD</td></tr>
-        <tr><td>LCD instrument size (inch)</td><td>12.3</td></tr>
-        
-        <tr><th colspan="2">Comfort/Anti-Theft Configuration</th></tr>
-        <tr><td>Electric suction door</td><td></td></tr>
-        <tr><td>Electric tailgate</td><td></td></tr>
-        <tr><td>Sensor-type tailgate</td><td></td></tr>
-        <tr><td>Electric tailgate position memory</td><td></td></tr>
-        <tr><td>Central locking system in the car</td><td>●</td></tr>
-        <tr><td>Remote control key type</td><td>Smart remote control key</td></tr>
-        <tr><td>Mobile Bluetooth Key</td><td>●</td></tr>
-        <tr><td>NFC/RFID Key</td><td>●</td></tr>
-        <tr><td>Keyless entry</td><td>Front Row</td></tr>
-        <tr><td>Keyless start</td><td>●</td></tr>
-        <tr><td>Remote Start</td><td>●</td></tr>
-        <tr><td>Remote control mobile vehicle</td><td>●</td></tr>
-        <tr><td>Vehicle summon function</td><td></td></tr>
-        <tr><td>Head-up display (HUD)</td><td></td></tr>
-        <tr><td>Built-in driving recorder</td><td>●</td></tr>
-        <tr><td>Active Noise Cancellation</td><td></td></tr>
-        <tr><td>Wireless charging for mobile phones</td><td></td></tr>
-        <tr><td>110V/220V/230V power socket</td><td></td></tr>
-        <tr><td>Luggage compartment 12V power socket</td><td></td></tr>
-        
-        <tr><th colspan="2">Seat Configuration</th></tr>
-        <tr><td>Seat Material</td><td>imitation leather</td></tr>
-        <tr><td>Sports style seats</td><td></td></tr>
-        <tr><td>Seat Layout</td><td>2+3</td></tr>
-        <tr><td>Second row independent seats</td><td></td></tr>
-        <tr><td>Third row seats</td><td></td></tr>
-        <tr><td>Electric seat adjustment</td><td>Main driving seat</td></tr>
-        <tr><td>Overall adjustment of the driver's seat</td><td>Move forward and backward</td></tr>
-        <tr><td>Backrest angle</td><td>●</td></tr>
-        <tr><td>Height adjustment</td><td>●</td></tr>
-        <tr><td>Driver's seat partial adjustment</td><td></td></tr>
-        <tr><td>Passenger seat overall adjustment</td><td>Move forward and backward</td></tr>
-        <tr><td>Passenger seat partial adjustment</td><td></td></tr>
-        <tr><td>Second row seat overall adjustment</td><td>Backrest angle adjustment</td></tr>
-        <tr><td>Second row seat partial adjustment</td><td></td></tr>
-        <tr><td>Front seat functions</td><td></td></tr>
-        <tr><td>Second row seat functions</td><td></td></tr>
-        <tr><td>Third row seat functions</td><td></td></tr>
-        <tr><td>Boss Key</td><td></td></tr>
-        <tr><td>Front/rear armrests</td><td>Front Row</td></tr>
-        <tr><td>Back row</td><td>●</td></tr>
-        <tr><td>Rear cup holder</td><td>Standard</td></tr>
-    </table>
-
-    <div id="table4-gallery" class="image-gallery">
-        <img src="image10.jpg" alt="2024 Honor Edition 605KM Flagship PLUS Image 1">
-        <img src="image11.jpg" alt="2024 Honor Edition 605KM Flagship PLUS Image 2">
-        <img src="image12.jpg" alt="2024 Honor Edition 605KM Flagship PLUS Image 3">
-    </div>
-</body>
-</html>
+    </body>
